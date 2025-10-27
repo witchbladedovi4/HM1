@@ -1,0 +1,47 @@
+﻿<Window x:Class="HM1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HM1"
+        mc:Ignorable="d"
+        Topmost="True"
+        Title="MainWindow" Height="450" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <Button x:Name="startButton" 
+                Content="Запуск Notepad"
+                Click="StartButton_Click" 
+                Height="30" 
+                Margin="10,10,10,10" 
+                HorizontalAlignment="Left"/>
+        
+        <Button x:Name="updateButton" 
+                Content="Обновление текстового поля"
+                Click="UpdatetButton_Click" 
+                Height="30" 
+                HorizontalAlignment="Right" 
+                Margin="10 10 10 10" />
+
+        <TextBox x:Name="txtContent"
+                 Grid.Row="2"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 
+
+            />
+        <TextBlock  x:Name="txtStatus"
+                    Grid.Row="3"
+                    Text="Готов"
+                    Foreground="Gray"
+                    HorizontalAlignment="Center"
+            />
+    </Grid>
+</Window>
