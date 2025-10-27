@@ -126,5 +126,12 @@ namespace HM1
 
             base.OnClosed(e);
         }
+
+        private void cmdApp_Click(object sender, RoutedEventArgs e)
+        {
+            var cmdWindow = new CmdWindow();
+            cmdWindow.Show();
+            this.Close();
+        }
     }
 }
